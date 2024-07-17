@@ -124,7 +124,16 @@ pip install -e .
 ```
 
 ### Troubleshooting
-You may have issues with incompatible PyTorch and Jax versions, see Issue ("JAX and TORCH" #18032)[https://github.com/google/jax/issues/18032] for potential solutions.
+You may have issues with incompatible PyTorch and Jax versions, see Issue ("JAX and TORCH" #18032)[https://github.com/google/jax/issues/18032] for potential solutions. Additionally, I've found successing with the specific jax and jaxlib versions in the pyproject.toml file.
+
+If you have the following error:
+```
+RuntimeError: Unable to initialize backend 'cuda': INVALID_ARGUMENT: Mismatched PJRT plugin PJRT API version (0.54) and framework PJRT API version 0.47). (you may need to uninstall the failing plugin package, or set JAX_PLATFORMS=cpu to skip this backend.)
+```
+Then run the following:
+```
+export JAX_PLATFORMS=cpu
+```
 
 ## Library of symmetric dynamical systems
 The following is a non-exhaustive and expanding list of dynamical systems with Discrete Morphological Symmetries. Each example can be

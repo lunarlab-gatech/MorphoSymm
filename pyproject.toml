@@ -39,7 +39,8 @@ dependencies = [
     "pandas",
     "scikit-learn",
     "torch",
-    "jax"
+    "jax==0.4.26",
+    "jaxlib==0.4.26"
 ]
 [project.scripts]
     view = "morpho_symm:robot_symmetry_visualization"

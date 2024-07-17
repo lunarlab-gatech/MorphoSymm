@@ -22,11 +22,10 @@ from sklearn.metrics import jaccard_score, precision_score
 from morpho_symm.utils.robot_utils import load_symmetric_system
 
 try:
-    deep_contact_estimator_path = pathlib.Path(__file__).parent.absolute()
+    deep_contact_estimator_path = pathlib.Path(pathlib.Path(__file__).parent.parent.absolute(), 'deep-contact-estimator', 'utils')
     assert deep_contact_estimator_path.exists()
-    sys.path.append(str(deep_contact_estimator_path / 'deep-contact-estimator/utils/'))
-    sys.path.append(str(deep_contact_estimator_path / 'deep-contact-estimator/src/'))
-    from .data_handler import contact_dataset
+    sys.path.append(str(deep_contact_estimator_path))
+    from data_handler import contact_dataset
 except ImportError as e:
     raise ImportError("Deep Contact Estimator submodule not initialized, run `git submodule update "
                       "--init --recursive --progress") from e
