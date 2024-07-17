@@ -21,9 +21,9 @@ python train_supervised.py --multirun robot=Solo,Solo-c2 dataset=com_momentum da
 ### Static Friction Regime Contact Detection 
 - CNN
 ```
-python train_supervised.py --multirun robot=mini-cheetah-c2 dataset=contact dataset.data_folder=training_splitted dataset.train_ratio=0.85 dataset.augment=True,False exp_name=contact_sample_eff_splitted model=contact_cnn model.lr=1e-4 
+python train_supervised.py --multirun robot=mini_cheetah-c2 dataset=contact dataset.data_folder=training_splitted dataset.train_ratio=0.85 dataset.augment=True,False exp_name=contact_sample_eff_splitted model=contact_cnn model.lr=1e-4 
 ```
 - ECNN
 ```
-python train_supervised.py --multirun robot=mini-cheetah-c2 dataset=contact dataset.data_folder=training_splitted dataset.train_ratio=0.85 dataset.augment=False exp_name=contact_sample_eff_splitted model=contact_ecnn model.lr=1e-5 
+python train_supervised.py --multirun robot=mini_cheetah-c2 dataset=contact dataset.data_folder=training_splitted dataset.train_ratio=0.85 dataset.augment=False exp_name=contact_sample_eff_splitted model=contact_ecnn model.lr=1e-5 
 ```

@@ -8,9 +8,8 @@ import seaborn as sns
 import pandas as pd
 import numpy as np
 import re
-from datasets.umich_contact_dataset import UmichContactDataset
-
-from utils.algebra_utils import cm2inch
+from morpho_symm.data.contact_dataset.umich_contact_dataset import UmichContactDataset
+from pybinding.pltutils import cm2inch
 
 import re
 

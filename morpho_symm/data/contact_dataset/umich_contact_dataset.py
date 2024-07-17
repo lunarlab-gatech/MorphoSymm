@@ -24,9 +24,9 @@ from morpho_symm.utils.robot_utils import load_symmetric_system
 try:
     deep_contact_estimator_path = pathlib.Path(__file__).parent.absolute()
     assert deep_contact_estimator_path.exists()
-    sys.path.append(str(deep_contact_estimator_path / 'deep-contact-estimator/utils'))
-    sys.path.append(str(deep_contact_estimator_path / 'deep-contact-estimator/src'))
-    from data_handler import contact_dataset
+    sys.path.append(str(deep_contact_estimator_path / 'deep-contact-estimator/utils/'))
+    sys.path.append(str(deep_contact_estimator_path / 'deep-contact-estimator/src/'))
+    from .data_handler import contact_dataset
 except ImportError as e:
     raise ImportError("Deep Contact Estimator submodule not initialized, run `git submodule update "
                       "--init --recursive --progress") from e
@@ -70,7 +70,7 @@ class UmichContactDataset(contact_dataset):
         # ----
         self.device = device
 
-        self.contact_state_freq = slabelelf.get_class_frequency()
+        self.contact_state_freq = self.get_class_frequency()
 
         self.rep_in, self.rep_out = self.get_in_out_symmetry_groups_reps(robot_cfg)
         self.augment = augment

@@ -11,8 +11,7 @@ from pytorch_lightning import Trainer, seed_everything
 from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint
 from torch.utils.data import DataLoader
 from torch.utils.data.sampler import WeightedRandomSampler
-
-from morpho_symm.datasets.com_momentum.com_momentum import COMMomentum
+# from morpho_symm.datasets.com_momentum.com_momentum import COMMomentum
 from morpho_symm.nn.LightningModel import LightningModel
 
 try:
@@ -39,10 +38,10 @@ def get_model(cfg: DictConfig, in_field_type=None, out_field_type=None):
                             init_mode=cfg.init_mode, inv_dim_scale=cfg.inv_dims_scale, bias=cfg.bias)
     elif "cnn" == cfg.model_type.lower():
         import sys
-        deep_contact_estimator_path = pathlib.Path(morpho_symm.__file__).parent / 'dataset/contact_dataset/'
+        deep_contact_estimator_path = pathlib.Path(morpho_symm.__file__).parent / 'data/contact_dataset/'
         assert deep_contact_estimator_path.exists(), deep_contact_estimator_path
         sys.path.append(str(deep_contact_estimator_path / 'deep-contact-estimator/src'))
-        from morpho_symm.datasets.contact_dataset import contact_cnn
+        from morpho_symm.data.contact_dataset import contact_cnn
         model = contact_cnn()
 
     elif "emlp" == cfg.model_type.lower():

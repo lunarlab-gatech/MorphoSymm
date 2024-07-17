@@ -123,6 +123,9 @@ cd MorphoSymm
 pip install -e .
 ```
 
+### Troubleshooting
+You may have issues with incompatible PyTorch and Jax versions, see Issue ("JAX and TORCH" #18032)[https://github.com/google/jax/issues/18032] for potential solutions.
+
 ## Library of symmetric dynamical systems
 The following is a non-exhaustive and expanding list of dynamical systems with Discrete Morphological Symmetries. Each example can be
 reproduced in a 3D interactive environment running:

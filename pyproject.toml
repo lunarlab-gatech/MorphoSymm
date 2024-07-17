@@ -35,6 +35,11 @@ dependencies = [
     "networkx",
     "pin",
     "pybullet",
+    "emlp",
+    "pandas",
+    "scikit-learn",
+    "torch",
+    "jax"
 ]
 [project.scripts]
     view = "morpho_symm:robot_symmetry_visualization"
