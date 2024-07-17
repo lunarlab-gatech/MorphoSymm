@@ -1,0 +1,3 @@
+[submodule "morpho_symm/data/deep-contact-estimator"]
+	path = morpho_symm/data/deep-contact-estimator
+	url = https://github.com/UMich-CURLY/deep-contact-estimator.git
