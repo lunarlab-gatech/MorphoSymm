@@ -1,0 +1,217 @@
+{
+    "os": "Linux-6.5.0-44-generic-x86_64-with-glibc2.35",
+    "python": "3.9.19",
+    "heartbeatAt": "2024-07-25T21:24:07.343579",
+    "startedAt": "2024-07-25T21:24:01.271872",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--multirun",
+        "robot=mini_cheetah-c2",
+        "dataset=contact",
+        "dataset.data_folder=training_splitted",
+        "dataset.train_ratio=0.85",
+        "dataset.augment=False",
+        "exp_name=contact_sample_eff_splitted",
+        "model=contact_cnn",
+        "model.lr=1e-4"
+    ],
+    "state": "running",
+    "program": "-m joblib.externals.loky.backend.popen_loky_posix",
+    "codePathLocal": null,
+    "git": {
+        "remote": "git@github.com:lunarlab-gatech/MorphoSymm.git",
+        "commit": "a3bf5b5924e4c09aa745abd3761a8467acf3c8ad"
+    },
+    "email": "danielcbutter@gmail.com",
+    "root": "/home/dbutterfield3/Research/MorphoSymm",
+    "host": "aellnar08116l",
+    "username": "dbutterfield3",
+    "executable": "/home/dbutterfield3/miniconda3/envs/morph/bin/python",
+    "cpu_count": 24,
+    "cpu_count_logical": 32,
+    "cpu_freq": {
+        "current": 1468.76921875,
+        "min": 800.0,
+        "max": 4675.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3717.47,
+            "min": 800.0,
+            "max": 5300.0
+        },
+        {
+            "current": 3083.676,
+            "min": 800.0,
+            "max": 5300.0
+        },
+        {
+            "current": 3643.388,
+            "min": 800.0,
+            "max": 5300.0
+        },
+        {
+            "current": 2454.667,
+            "min": 800.0,
+            "max": 5300.0
+        },
+        {
+            "current": 3572.537,
+            "min": 800.0,
+            "max": 5300.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 5300.0
+        },
+        {
+            "current": 2039.294,
+            "min": 800.0,
+            "max": 5300.0
+        },
+        {
+            "current": 3602.745,
+            "min": 800.0,
+            "max": 5300.0
+        },
+        {
+            "current": 3154.929,
+            "min": 800.0,
+            "max": 5500.0
+        },
+        {
+            "current": 823.039,
+            "min": 800.0,
+            "max": 5500.0
+        },
+        {
+            "current": 3670.789,
+            "min": 800.0,
+            "max": 5500.0
+        },
+        {
+            "current": 3482.109,
+            "min": 800.0,
+            "max": 5500.0
+        },
+        {
+            "current": 3650.823,
+            "min": 800.0,
+            "max": 5300.0
+        },
+        {
+            "current": 1068.467,
+            "min": 800.0,
+            "max": 5300.0
+        },
+        {
+            "current": 800.874,
+            "min": 800.0,
+            "max": 5300.0
+        },
+        {
+            "current": 3574.752,
+            "min": 800.0,
+            "max": 5300.0
+        },
+        {
+            "current": 2518.431,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 799.317,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 950.702,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 4000.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 1728.3829345703125,
+            "used": 27.5277099609375
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 4090 Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 4090 Laptop GPU",
+            "memory_total": 17171480576
+        }
+    ],
+    "memory": {
+        "total": 62.47588348388672
+    }
+}

@@ -71,12 +71,12 @@ class UmichContactDataset(contact_dataset):
 
         self.contact_state_freq = self.get_class_frequency()
 
-        self.rep_in, self.rep_out = self.get_in_out_symmetry_groups_reps(robot_cfg)
+        # self.rep_in, self.rep_out = self.get_in_out_symmetry_groups_reps(robot_cfg)
         self.augment = augment
         self.n_contact_states = 16
 
-        self.hin = torch.tensor(self.rep_in.G.discrete_generators[0].todense(), device=device)
-        self.hout = torch.tensor(self.rep_out.G.discrete_generators[0].todense(), device=device)
+        #self.hin = torch.tensor(self.rep_in.G.discrete_generators[0].todense(), device=device)
+        #self.hout = torch.tensor(self.rep_out.G.discrete_generators[0].todense(), device=device)
 
         if use_class_imbalance_w:
             self.class_weights = 1 - self.contact_state_freq if loss_class_weights is None else loss_class_weights

@@ -38,10 +38,10 @@ def get_model(cfg: DictConfig, in_field_type=None, out_field_type=None):
                             init_mode=cfg.init_mode, inv_dim_scale=cfg.inv_dims_scale, bias=cfg.bias)
     elif "cnn" == cfg.model_type.lower():
         import sys
-        deep_contact_estimator_path = pathlib.Path(morpho_symm.__file__).parent / 'data/contact_dataset/'
+        deep_contact_estimator_path = pathlib.Path(morpho_symm.__file__).parent / 'data/'
         assert deep_contact_estimator_path.exists(), deep_contact_estimator_path
         sys.path.append(str(deep_contact_estimator_path / 'deep-contact-estimator/src'))
-        from morpho_symm.data.contact_dataset import contact_cnn
+        from contact_cnn import contact_cnn
         model = contact_cnn()
 
     elif "emlp" == cfg.model_type.lower():
@@ -188,8 +188,8 @@ def main(cfg: DictConfig):
 
         # Prepare model
         model = get_model(cfg.model,
-                          in_field_type=train_dataset.in_type,
-                          out_field_type=train_dataset.out_type)
+                          in_field_type=None,
+                          out_field_type=None)
         log.info(model)
 
         # Prepare Lightning

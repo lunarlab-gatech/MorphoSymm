@@ -1,0 +1,8 @@
+- robot=mini_cheetah-c2
+- dataset=contact
+- dataset.data_folder=training_splitted
+- dataset.train_ratio=0.85
+- dataset.augment=False
+- exp_name=contact_sample_eff_splitted
+- model=contact_cnn
+- model.lr=0.0001

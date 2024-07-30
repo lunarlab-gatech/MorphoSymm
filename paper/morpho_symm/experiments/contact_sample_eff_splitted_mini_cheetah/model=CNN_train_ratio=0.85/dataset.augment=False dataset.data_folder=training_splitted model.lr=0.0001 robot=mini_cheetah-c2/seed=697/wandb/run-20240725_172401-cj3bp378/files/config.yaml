@@ -1,0 +1,661 @@
+wandb_version: 1
+
+seed:
+  desc: null
+  value: 697
+exp_name:
+  desc: null
+  value: contact_sample_eff_splitted
+device:
+  desc: null
+  value: 0
+num_workers:
+  desc: null
+  value: 0
+debug:
+  desc: null
+  value: false
+debug_loops:
+  desc: null
+  value: false
+use_volatile:
+  desc: null
+  value: false
+dataset:
+  desc: null
+  value:
+    job_name: contact_sample_eff_splitted_mini_cheetah/model=CNN_train_ratio=0.85
+    name: contact
+    data_folder: training_splitted
+    contact_type: contact
+    log_every_n_epochs: 0.15
+    augment: false
+    balanced_classes: false
+    max_epochs: 60
+    batch_size: 30
+    window_size: 150
+    train_ratio: 0.85
+    test_ratio: 1
+    val_ratio: 0.15
+    shuffle: true
+model:
+  desc: null
+  value:
+    model_type: CNN
+    bias: true
+    lr: 0.0001
+    init_mode: fan_in
+    fine_tune_lr_scale: 0.1
+    fine_tune_num_layers: 2
+robot:
+  desc: null
+  value:
+    name: mini_cheetah
+    seed: 50
+    group_label: C2
+    rep_fields: real
+    permutation_Q_js:
+    - - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 18
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+    - - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+    - - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+    permutation_TqQ_js:
+    - - 3
+      - 4
+      - 5
+      - 0
+      - 1
+      - 2
+      - 9
+      - 10
+      - 11
+      - 6
+      - 7
+      - 8
+    - - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+    - - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+    reflection_Q_js:
+    - - 1
+      - -1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - -1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - -1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - -1
+      - 1
+      - 1
+      - 1
+      - 1
+    - - 1
+      - 1
+      - 1
+      - -1
+      - 1
+      - -1
+      - 1
+      - 1
+      - 1
+      - -1
+      - 1
+      - -1
+      - 1
+      - 1
+      - 1
+      - -1
+      - 1
+      - -1
+      - 1
+      - 1
+      - 1
+      - -1
+      - 1
+      - -1
+    - - 1
+      - -1
+      - 1
+      - -1
+      - 1
+      - -1
+      - 1
+      - -1
+      - 1
+      - -1
+      - 1
+      - -1
+      - 1
+      - -1
+      - 1
+      - -1
+      - 1
+      - -1
+      - 1
+      - -1
+      - 1
+      - -1
+      - 1
+      - -1
+    reflection_TqQ_js:
+    - - -1
+      - 1
+      - 1
+      - -1
+      - 1
+      - 1
+      - -1
+      - 1
+      - 1
+      - -1
+      - 1
+      - 1
+    - - 1
+      - -1
+      - -1
+      - 1
+      - -1
+      - -1
+      - 1
+      - -1
+      - -1
+      - 1
+      - -1
+      - -1
+    - - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+    fix_base: false
+    tint_bodies: true
+    draw_floor: true
+    hip_height: 0.35
+    endeff_names:
+    - thigh_fr_to_knee_fr_j
+    - thigh_fl_to_knee_fl_j
+    - thigh_hr_to_knee_hr_j
+    - thigh_hl_to_knee_hl_j
+    init_q:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 1
+    - np.cos(0)
+    - np.sin(0)
+    - np.cos(np.pi/3)
+    - np.sin(np.pi/3)
+    - np.cos(1.0)
+    - np.sin(1.0)
+    - np.cos(0)
+    - np.sin(0)
+    - np.cos(np.pi/3)
+    - np.sin(np.pi/3)
+    - np.cos(1.0)
+    - np.sin(1.0)
+    - np.cos(0)
+    - np.sin(0)
+    - np.cos(-np.pi/3)
+    - np.sin(-np.pi/3)
+    - np.cos(-1.0)
+    - np.sin(-1.0)
+    - np.cos(0)
+    - np.sin(0)
+    - np.cos(-np.pi/3)
+    - np.sin(-np.pi/3)
+    - np.cos(-1.0)
+    - np.sin(-1.0)
+    q_zero:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - np.cos(0)
+    - np.sin(0)
+    - np.cos(np.pi/2)
+    - np.sin(np.pi/2)
+    - np.cos(0)
+    - np.sin(0)
+    - np.cos(0)
+    - np.sin(0)
+    - np.cos(np.pi/2)
+    - np.sin(np.pi/2)
+    - np.cos(0)
+    - np.sin(0)
+    - np.cos(0)
+    - np.sin(0)
+    - np.cos(-np.pi/2)
+    - np.sin(-np.pi/2)
+    - np.cos(0)
+    - np.sin(0)
+    - np.cos(0)
+    - np.sin(0)
+    - np.cos(-np.pi/2)
+    - np.sin(-np.pi/2)
+    - np.cos(0)
+    - np.sin(0)
+    angle_sweep: 0.7
+    permutation_euler_xyz:
+    - - 0
+      - 1
+      - 2
+    - - 0
+      - 1
+      - 2
+    - - 0
+      - 1
+      - 2
+    reflection_euler_xyz:
+    - - -1
+      - 1
+      - -1
+    - - 1
+      - -1
+      - -1
+    - - -1
+      - -1
+      - 1
+    permutation_kin_chain:
+    - - 1
+      - 0
+      - 3
+      - 2
+    - - 2
+      - 3
+      - 0
+      - 1
+    - - 0
+      - 1
+      - 2
+      - 3
+    reflection_kin_chain:
+    - - 1
+      - 1
+      - 1
+      - 1
+    - - 1
+      - 1
+      - 1
+      - 1
+    - - 1
+      - 1
+      - 1
+      - 1
+_wandb:
+  desc: null
+  value:
+    python_version: 3.9.19
+    cli_version: 0.17.5
+    framework: lightning
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1721942641
+    t:
+      1:
+      - 1
+      - 5
+      - 9
+      - 50
+      - 53
+      - 55
+      - 103
+      2:
+      - 1
+      - 5
+      - 9
+      - 50
+      - 53
+      - 55
+      - 103
+      3:
+      - 1
+      - 7
+      - 13
+      - 16
+      - 23
+      - 62
+      - 66
+      4: 3.9.19
+      5: 0.17.5
+      8:
+      - 5
+      - 9
+      13: linux-x86_64
+    m:
+    - 1: trainer/global_step
+      6:
+      - 3
+    - 1: gradients/model\.fc\.6\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.fc\.6\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.fc\.6\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.fc\.6\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.fc\.6\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.fc\.6\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.fc\.3\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.fc\.3\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.fc\.3\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.fc\.3\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.fc\.3\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.fc\.3\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.fc\.0\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.fc\.0\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.fc\.0\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.fc\.0\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.fc\.0\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.fc\.0\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block2\.2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block2\.2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block2\.2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block2\.2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block2\.2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block2\.2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block2\.0\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block2\.0\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block2\.0\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block2\.0\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block2\.0\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block2\.0\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block1\.2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block1\.2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block1\.2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block1\.2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block1\.2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block1\.2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block1\.0\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block1\.0\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block1\.0\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block1\.0\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block1\.0\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/model\.block1\.0\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: contact_state/acc/train
+      5: 1
+      6:
+      - 1
+    - 1: legs_avg/acc/train
+      5: 1
+      6:
+      - 1
+    - 1: RF/acc/train
+      5: 1
+      6:
+      - 1
+    - 1: LF/acc/train
+      5: 1
+      6:
+      - 1
+    - 1: RH/acc/train
+      5: 1
+      6:
+      - 1
+    - 1: LH/acc/train
+      5: 1
+      6:
+      - 1
+    - 1: loss/train
+      5: 1
+      6:
+      - 1
+    - 1: epoch
+      5: 1
+      6:
+      - 1
+lr:
+  desc: null
+  value: 0.0001
+loss_fn:
+  desc: null
+  value: null
+metrics_fn:
+  desc: null
+  value: <lambda>
+test_epoch_metrics_fn:
+  desc: null
+  value: <lambda>
+val_epoch_metrics_fn:
+  desc: null
+  value: <lambda>
+log_preact:
+  desc: null
+  value: false
+log_w:
+  desc: null
+  value: false
